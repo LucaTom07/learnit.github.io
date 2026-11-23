@@ -1,4 +1,4 @@
-const C = 'parla-v2';
+const C = 'parla-v3';
 const ASSETS = [
   './',
   'index.html',
