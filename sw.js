@@ -1,5 +1,5 @@
 // Parla service worker: network-first, versioned cache, old caches removed on activate.
-const CACHE = 'parla-v3';
+const CACHE = 'parla-v4';
 const FILES = ['./', 'index.html', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'icon-maskable-512.png', 'apple-touch-icon.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => Promise.all(FILES.map(f => c.add(f).catch(() => {})))).then(() => self.skipWaiting()));
